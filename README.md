@@ -1,9 +1,9 @@
-##Introduction
+## Introduction
 In this article, We will going to talk about various ways of Real-Time Data Communication techniques. 
 
 Real-Time Communication is a mode of telecommunication where all the connected clients can exchange information instantly or with negligible transmission delay. There are various techniques by which, We can exchange information between client & server in real-time, Some are:-
 
-##Techniques
+## Techniques
 
 1. Polling
 2. Server Sent Events
@@ -11,7 +11,7 @@ Real-Time Communication is a mode of telecommunication where all the connected c
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/ejq4nvu0a560j5hyh7wp.png)
 
-###1. Polling
+### 1. Polling
 
 * It is a type of "Client Pull" architecture where client constantly request the server for updates at certain regular intervals.
 
@@ -129,7 +129,7 @@ node app.js
 
 We have successfully implemented the *Polling* technique in Node.js. As you can see it's transmission latency is very high.
 
-###2. Server Sent Events
+### 2. Server Sent Events
 
 * It is a type of "Server Push" architecture, Where server instantly pushes the updates to client whenever it receives new information.
 
@@ -245,7 +245,7 @@ node app.js
 
 We have successfully implemented the *Server Sent Events* technique in Node.js. We can use this protocol where "Server to Client Transmission" is our only concern.
 
-###3. Web Sockets
+### 3. Web Sockets
 
 * It is a type of "Server Push" architecture.
 
@@ -364,12 +364,12 @@ node app.js
 We have successfully implemented the *Web Socket* technique in Node.js.
 
 
-##Summary
+## Summary
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/sjyt6xl0rzi1c5gxlrxl.png)
 
 
-##Conclusion
+## Conclusion
 
 There are the most used techniques we have disscussed, Apart from these there are hundreds of techniques available for real-time data transmission.
 
