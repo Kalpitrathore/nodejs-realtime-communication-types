@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Server Sent Events</title>
+    </head>
+    <body>
+        <div id="updates"></div>
+    </body>
+    <script type="text/javascript">    
+
+        var source = new EventSource('/server-sent-events')
+
+        source.addEventListener('message', function(e) {            
+            document.getElementById('updates').innerHTML = document.getElementById('updates').innerHTML + "Received: "+e.data+"</br>";
+        }, false)
+
+    </script>
+</html>

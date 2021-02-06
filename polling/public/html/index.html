@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Polling</title>
+    </head>
+    <body>
+        <div id="updates"></div>
+    </body>
+    <script type="text/javascript">
+        
+        var interval = setInterval(function(){
+            getUpdates();
+        }, 5000);
+
+        function getUpdates()
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/", true);
+            xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {                    
+                    document.getElementById('updates').innerHTML = document.getElementById('updates').innerHTML + "Received: "+JSON.parse(xhr.responseText).update+"</br>";
+                }
+            }
+            };
+            xhr.onerror = function (e) {
+                console.error(xhr.statusText);
+            };
+            xhr.send(null);
+        }
+    </script>
+</html>
